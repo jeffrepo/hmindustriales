@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="hmindustriales_view_order_line_tree">
+        <field name="name">hmindustriales.sale.order.line.view.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='order_line']/form//field[@name='price_unit']" position="before">
+                <field name="ultimo_precio_venta"/>
+            </xpath>
+        </field>
+    </record>
+    
+    <record model="ir.ui.view" id="hmindustriales_sale_order_line_form">
+        <field name="name">"hmindustriales.sale.order.line.tree.view.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+           <xpath expr="//field[@name='order_line']/tree//field[@name='price_unit']" position="after">
+                <field name="ultimo_precio_venta"/>
+            </xpath>
+        </field>
+    </record>    
+</odoo>

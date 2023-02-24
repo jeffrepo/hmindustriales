@@ -14,9 +14,12 @@
     'category': 'Uncategorized',
     'version': '0.1',
 
-    'depends': ['sale'],
+    'depends': ['sale','base','l10n_mx_edi'],
 
     'data': [
+        'views/sale_order_views.xml',
+        'report/ir_actions_report_templates.xml',
+        'views/res_partner_view.xml',
     ],
     'assets':{
         'point_of_sale.assets': [

@@ -23,8 +23,7 @@
     ],
     'assets':{
         'point_of_sale.assets': [
-            #'pos_technotrade/static/src/js/**/*.js',
-            #'pos_technotrade/static/src/xml/**/*.xml',
+            'hmindustriales/static/src/js/Screens/ProductScreen.js',
         ],
         'web.assets_qweb':[
         ],

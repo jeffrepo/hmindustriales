@@ -21,7 +21,7 @@ class SaleOrderLine(models.Model):
         for line in self:
             precio_ultima_venta = 0
             if line.product_id:
-                ultima_venta_id = self.env['sale.order.line'].search([('product_id','=', line.product_id.id),('state','=','sale')], order="id desc")
+                ultima_venta_id = self.env['sale.order.line'].search([('product_id','=', line.product_id.id),('state','=','sale'),('order_id.partner_id','=', line.order_id.partner_id.id)], order="id desc")
                 if ultima_venta_id:
                     precio_ultima_venta = ultima_venta_id[0].price_unit
                     line.ultimo_precio_venta = precio_ultima_venta
